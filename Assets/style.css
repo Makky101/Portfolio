@@ -116,3 +116,33 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+.animated-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 2rem auto;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* hover animation */
+.animated-text:hover {
+    animation: float-scale 1s ease-in-out infinite alternate;
+}
+
+@keyframes float-scale {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-5px) scale(1.02);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
